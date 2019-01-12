@@ -1,0 +1,10 @@
+if !(player getvariable "azm_lavoro_attivo") exitwith {["Non hai lavori attivi","info",10] spawn azm_fnc_notifica;};
+closedialog 0;
+player setvariable ["azm_lavoro_attivo",false];
+deletemarkerlocal "marker_primo";
+deletemarkerlocal "marker_secondo";
+onEachFrame {};
+terminate lavoro_attivo;
+diag_log format ["AZM>>%1>> %2 (%3) ha annullato un lavoro",time,name player,getPlayerUID player];
+["hai annullato il lavoro in corso","info",10] spawn azm_fnc_notifica;
+[] spawn azm_fnc_loop;

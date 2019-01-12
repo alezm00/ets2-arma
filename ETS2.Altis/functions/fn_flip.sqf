@@ -1,0 +1,12 @@
+_veicolo = cursorObject;
+_pos = getPosATL _veicolo;
+_veicolo allowDamage false;
+sleep 0.1;
+_veicolo setPosATL [_pos select 0,_pos select 1,(_pos select 2)+1];
+_veicolo setVectorUp [0, 0, 1];
+_veicolo setPosATL [_pos select 0,_pos select 1,(_pos select 2)+1];
+_veicolo setPosATL [_pos select 0,_pos select 1,(_pos select 2)+1];
+["veicolo flippato con successo","success",10] spawn azm_fnc_notifica;
+diag_log format ["AZM>>%1>> %2 (%3) ha flippato un veicolo",time,name player,getPlayerUID player];
+sleep 5;
+_veicolo allowDamage true;

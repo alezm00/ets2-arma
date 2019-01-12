@@ -1,1 +1,1 @@
-ets2-arma
+ETS2 Arma

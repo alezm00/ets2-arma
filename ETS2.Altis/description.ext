@@ -1,0 +1,11 @@
+//enableDebugConsole[] = {"76561198164382639"};
+skipLobby = 1;
+allowFunctionsLog = 1;
+#include "dialogs\amz_defines.hpp"
+#include "dialogs\dialogs.hpp"
+#include "infiSTAR_AdminMenu.hpp"
+
+class CfgFunctions
+{
+#include "functions\functions.hpp"
+}
